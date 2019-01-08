@@ -40,7 +40,7 @@ var orm = {
     // method to select all burgers from our database
     all: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
-        connection.query(queryString, function (err, result) {
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -92,7 +92,7 @@ var orm = {
 
     delete: function (table, condition, cb) {
         var queryString = "DELETE FROM " + table;
-        queryString += "WHERE";
+        queryString += "WHERE ";
         queryString += condition;
 
         connection.query(queryString, function (err, result) {
