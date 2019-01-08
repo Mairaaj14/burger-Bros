@@ -13,6 +13,9 @@ ul{
 
 }
 
+form-group {
+    background-color: black;
+}
 main {
     flex: 1 0 auto;
     background-color: aquamarine;
@@ -32,7 +35,9 @@ h4 {
     margin: 0rem 0 0rem 0;
     transform: translateY(30px);
 }
-
+nav .brand-logo {
+    margin-right: 60%;
+}
 h1 {
     font-size:7rem;
     color:black;
@@ -73,6 +78,7 @@ header > nav {
     height: 50%;
     width: 100%;
     background-color: yellow;
+    
 }
 
 
