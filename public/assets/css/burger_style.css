@@ -1,0 +1,115 @@
+body {
+    background-color: aquamarine;
+    font-size:3.5rem;
+    width: 100%;
+    margin: 0px auto; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+ul{
+    list-style: none;
+
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: aquamarine;
+
+}
+
+label {
+    font-size: 3.5rem;
+    color: black;
+}
+#mainpanel-content {
+    background-color: aquamarine;
+}
+h4 {
+    font-size: 2.28rem;
+    line-height: 150%;
+    margin: 0rem 0 0rem 0;
+    transform: translateY(30px);
+}
+
+h1 {
+    font-size:7rem;
+    color:black;
+    margin-top:5.5rem;
+}
+
+h1.z-depth-5{
+    margin:0; 
+    /* transform: translateY(5.5rem); */
+}
+
+main h1, h1, button {
+    font-weight: bold;
+}
+
+ main h2 {
+    font-weight: bold;
+}
+
+.container .row {
+    margin-left: -5rem;
+    margin-right: -12rem;
+}
+
+.mainpanel {
+   background-color:rgba(250, 250, 250, 1);
+  
+}
+
+header {
+    height: 270px;
+    margin: 0rem 0 2.0rem 0;
+    
+
+}
+
+header > nav {
+    height: 50%;
+    width: 100%;
+    background-color: yellow;
+}
+
+
+
+a {
+    color: white; 
+
+    }
+
+
+
+
+
+.invisible-container{
+    background-color: transparent;
+   
+}
+
+
+@media only screen and (max-width:480px) {
+    div.nav-wrapper.black.accent-2.z-depth-5{
+        width:580px; 
+    }
+    h1.z-depth-5 {
+        transform: translateX(-170px);
+    }
+    img{
+        display:none;
+    }
+    .container .row{
+        margin-right: -18rem;
+        margin-left: 0rem; 
+    }
+    footer.page-footer {
+        width:580px;
+    }
+    body {
+        font-size:2.5rem;
+    }
+}

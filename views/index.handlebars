@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eat-The-Burger</title>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+
+        <a href="/" class="brand-logo" id="logo">
+          <h1 class="z-depth-5">Burger Bros</h1>
+        
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s3 z-depth-5 mainpanel">
+          <div id="mainpanel-content">
+            <br>
+
+            <h2 class="z-depth-5" style="background-color:black;color:aquamarine;">Add The Burger!</h2>
+            <br>
+            <div class="divider z-depth-1"></div>
+
+            <br>
+
+            <form class="create-form">
+
+              <div class="form-group">
+                <label for="burgerInput" style="font-size:2 rem;">Burger Name:</label>
+                <input type="text" id="burgerInput" name="name">
+              </div>
+              <br>
+              <div class="divider z-depth-1"></div>
+              <br>
+              <div class="form-group">
+                <input type="radio" name="devoured" value="0"> Devour <br>
+                <input type="radio" name="devoured" value="1"> Make Your Own
+              </div>
+
+              <button class="z-depth-5" style="background-color: black; color: aquamarine;" type="submit">Add!
+              </button>
+              <br>
+              <br>
+              <div class="divider z-depth-1"></div>
+              <br>
+            </form>
+          </div>
+        </div>
+
+        <div class="invisible-container">
+
+          <div class="col s1 ">
+
+          </div>
+        </div>
+
+        <div class="col s3 z-depth-5 mainpanel">
+          <div id="mainpanel-content">
+            <br>
+            <h2 class="z-depth-5" style="background-color:black;color: aquamarine;">Make The Burger!</h2>
+            <br>
+            <div class="divider z-depth-1"></div>
+            <br>
+            <ul>
+              {{#each burger}}
+              {{#if devoured}}
+              <li>
+                {{burger_name}}</li>
+
+              <li><button class="change-devoured z-depth-5" style="background-color:black; color: aquamarine;" data-id="{{id}}"
+                  data-devoured="false">
+                  Devour!
+                </button>
+                <br><br>
+
+                <div class="divider z-depth-1"></div>
+                <br>
+              </li>
+              {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+
+        <div class="invisible-container">
+
+          <div class="col s1 ">
+
+          </div>
+        </div>
+
+        <div class="col s3 z-depth-5 mainpanel">
+          <div id="mainpanel-content">
+            <br>
+            <h2 class="z-depth-5" style="background-color:black;color:aquamarine;">Devoured Burgers!</h2>
+            <br>
+            <div class="divider z-depth-1"></div>
+            <br>
+            <ul>
+              {{#each burger}}
+              {{#unless devoured}}
+              <li>
+                {{burger_name}}
+              </li>
+              <li> <button class="change-devoured z-depth-5" style="background-color:black; color:white;" data-id="{{id}}"
+                  data-devoured="true">
+                  Devoured!
+                </button>
+                <br>
+                <br>
+                <div class="divider z-depth-1"></div>
+                <br>
+
+              </li>
+              {{/unless}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black accent-2 z-depth-5 height=15%">
+    
+    
+  </footer>
+
+</body>
+
+</html>
